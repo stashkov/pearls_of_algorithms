@@ -42,7 +42,7 @@ def assign_points_to_centers(list_of_points, centers):
 def find_new_centers(clusters):
     new_centers = []
     for k in sorted(clusters.keys()):  # TODO remove sorted later
-        new_centers.append(np.mean(clusters[k], axis=0))
+        new_centers.append(np.mean(clusters[k], axis=0))  # calc mean of each column
     return np.array(new_centers)
 
 
